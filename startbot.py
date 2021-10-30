@@ -13,6 +13,10 @@ async def on_ready():
 
 @bot.event
 async def on_message_delete(message: discord.Message):
+    if message.author.bot:
+        return
+    if message.content.startswith(('.au ','!'))
+        return
     embed = discord.Embed(
         # title="📣 ボイスチャンネル",
         description=message.content,
